@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "_test_first", "_test_first\_test_first.vcxproj", "{C738B1E8-4C1C-488C-903C-427399AFE8CF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "asio_timer_one", "asio_timer_one\asio_timer_one.vcxproj", "{F5AAF719-EDE7-4067-9AF0-699F43B6878F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C738B1E8-4C1C-488C-903C-427399AFE8CF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C738B1E8-4C1C-488C-903C-427399AFE8CF}.Debug|Win32.Build.0 = Debug|Win32
+		{C738B1E8-4C1C-488C-903C-427399AFE8CF}.Release|Win32.ActiveCfg = Release|Win32
+		{C738B1E8-4C1C-488C-903C-427399AFE8CF}.Release|Win32.Build.0 = Release|Win32
+		{F5AAF719-EDE7-4067-9AF0-699F43B6878F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F5AAF719-EDE7-4067-9AF0-699F43B6878F}.Debug|Win32.Build.0 = Debug|Win32
+		{F5AAF719-EDE7-4067-9AF0-699F43B6878F}.Release|Win32.ActiveCfg = Release|Win32
+		{F5AAF719-EDE7-4067-9AF0-699F43B6878F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
