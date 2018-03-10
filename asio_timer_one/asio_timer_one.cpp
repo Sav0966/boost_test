@@ -40,7 +40,7 @@ int main()
 
 	ta.async_wait(&print); // Using a timer asynchronously
 
-	// It is important to remember to give the io_context some workto do
+	// It is important to remember to give the io_context some work to do
 	// before calling io_service::run(). If the io_context would not have
 	// had any work to do, io_service::run() would have returned immediately
 	io.run(); // Finally, we must call the io_service::run()
