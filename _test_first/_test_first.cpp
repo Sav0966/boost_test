@@ -1,4 +1,4 @@
-// _test_first.cpp: проверка путей заголовков и библиотек BOOST
+// _test_first.cpp: checking paths to the Boost's headers and library modules
 
 #include <iostream>
 #include <string>
