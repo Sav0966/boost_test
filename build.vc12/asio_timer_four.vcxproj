@@ -11,12 +11,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\asio_timer_three.cpp" />
+    <ClCompile Include="..\asio_timer_four.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8CE44425-DA36-429F-A2D9-8CB8AEFDDF68}</ProjectGuid>
+    <ProjectGuid>{512E78B0-57A7-4C9D-A75C-9F38FF439248}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>asio_timer_three</RootNamespace>
+    <RootNamespace>asio_timer_four</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
