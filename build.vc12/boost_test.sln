@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "asio_timer_three", "asio_ti
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "asio_timer_four", "asio_timer_four.vcxproj", "{512E78B0-57A7-4C9D-A75C-9F38FF439248}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "asio_timer_five", "asio_timer_five.vcxproj", "{011276B0-6C48-4C4E-B361-E441EA8A5042}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -33,6 +35,10 @@ Global
 		{512E78B0-57A7-4C9D-A75C-9F38FF439248}.Debug|Win32.Build.0 = Debug|Win32
 		{512E78B0-57A7-4C9D-A75C-9F38FF439248}.Release|Win32.ActiveCfg = Release|Win32
 		{512E78B0-57A7-4C9D-A75C-9F38FF439248}.Release|Win32.Build.0 = Release|Win32
+		{011276B0-6C48-4C4E-B361-E441EA8A5042}.Debug|Win32.ActiveCfg = Debug|Win32
+		{011276B0-6C48-4C4E-B361-E441EA8A5042}.Debug|Win32.Build.0 = Debug|Win32
+		{011276B0-6C48-4C4E-B361-E441EA8A5042}.Release|Win32.ActiveCfg = Release|Win32
+		{011276B0-6C48-4C4E-B361-E441EA8A5042}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
