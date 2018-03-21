@@ -86,23 +86,21 @@ public:
 	}
 };
 
-// The main function now causes io_service::run() to be called
-// from two threads : the main thread and one additional thread.
-// This is accomplished using an boost::thread object
-//
-// Just as it would with a call from a single thread, concurrent
-// calls to io_service::run() will continue to execute while there
-// is "work" left to do. The background thread will not exit
-// until all asynchronous operations have completed
-
 int main()
 {
 	boost::asio::io_context io;
 	printer p(io);
 
+	// The main function now causes io_service::run() to be called
+	// from two threads : the main thread and one additional thread.
+	// This is accomplished using an boost::thread object
 	boost::thread t(boost::bind(&boost::asio::io_context::run, &io));
-
 	io.run();
+
+	// Just as it would with a call from a single thread, concurrent
+	// calls to io_service::run() will continue to execute while there
+	// is "work" left to do. The background thread will not exit
+	// until all asynchronous operations have completed
 	t.join();
 
 	return 0;
