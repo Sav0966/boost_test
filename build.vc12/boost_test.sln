@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "asio_timer_five", "asio_tim
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "asio_dtime_one", "asio_dtime_one.vcxproj", "{F26F7CE1-9D92-4A47-9583-A64A21D1AD65}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "asio_dtime_four", "asio_dtime_four.vcxproj", "{0165A5AE-B3F8-4620-89B2-050CE1C2E99C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -45,6 +47,10 @@ Global
 		{F26F7CE1-9D92-4A47-9583-A64A21D1AD65}.Debug|Win32.Build.0 = Debug|Win32
 		{F26F7CE1-9D92-4A47-9583-A64A21D1AD65}.Release|Win32.ActiveCfg = Release|Win32
 		{F26F7CE1-9D92-4A47-9583-A64A21D1AD65}.Release|Win32.Build.0 = Release|Win32
+		{0165A5AE-B3F8-4620-89B2-050CE1C2E99C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0165A5AE-B3F8-4620-89B2-050CE1C2E99C}.Debug|Win32.Build.0 = Debug|Win32
+		{0165A5AE-B3F8-4620-89B2-050CE1C2E99C}.Release|Win32.ActiveCfg = Release|Win32
+		{0165A5AE-B3F8-4620-89B2-050CE1C2E99C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
