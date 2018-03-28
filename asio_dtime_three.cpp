@@ -1,4 +1,4 @@
-// asio_dtime_three.cpp: A asynchronous TCP daytime server
+// asio_dtime_three.cpp: An asynchronous TCP daytime server
 //
 // This tutorial program shows how to use asio
 // to implement a server application with TCP
