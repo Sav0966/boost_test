@@ -12,9 +12,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\serial_port\Executor.cpp" />
+    <ClCompile Include="..\serial_port\SerialPort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\serial_port\Executor.h" />
+    <ClInclude Include="..\serial_port\SerialPort.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4A573147-7ABC-4334-BB0D-C41BF3035007}</ProjectGuid>
