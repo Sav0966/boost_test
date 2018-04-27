@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="..\serial_port\Executor.cpp" />
     <ClCompile Include="..\serial_port\SerialPort.cpp" />
+    <ClCompile Include="..\serial_port\SerialPort_rw.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\serial_port\Executor.h" />

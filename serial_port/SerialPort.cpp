@@ -52,6 +52,21 @@ void SerialPort::ReadComplete(const boost::system::error_code &ec, size_t bytesT
 	else { Close(); SetErrorCode(ec); }
 }
 
+void SerialPort::Write(const unsigned char *buffer, size_t bufferLength)
+{
+	{ // Obtain a lock on the write queue and copy data
+		boost::mutex::scoped_lock lock(writeQueueMutex_);
+		writeQueue_.insert(writeQueue_.end(), buffer, buffer + bufferLength);
+	}
+
+	// Invoke WriteBegin() asynchronously by posting
+	// it to the io_context object to perform the write
+	serialPort_.get_io_context().post(
+		boost::bind(&SerialPort::WriteBegin, shared_from_this()));
+
+	// The caller of Write() can then continue processing
+	// and not block while the write is in progress
+}
 
 void SerialPort::WriteBegin()
 {
@@ -93,10 +108,10 @@ void SerialPort::WriteComplete(const boost::system::error_code &ec)
 }
 
 SerialPort::SerialPort(boost::asio::io_context &ioService, const std::string& portName) : 
-	serialPort_(ioService, portName), // Убрать из констуктора ???
+	serialPort_(ioService, portName), // TODO: Убрать из констуктора (открывает порт)
 	isOpen_(false)
 {
-	readBuffer_.resize(128); // Лучше убрать из конструктора !!!
+	readBuffer_.resize(128); // TODO: Убрать из конструктора
 }
 
 void SerialPort::Open(const onread_handler &onRead, unsigned int baudRate,
@@ -124,10 +139,13 @@ void SerialPort::Open(const onread_handler &onRead, unsigned int baudRate,
 
 SerialPort::~SerialPort() { Close(); }
 
-void SerialPort::Close() {
+void SerialPort::Close()
+{
 	if (isOpen_) {
 		isOpen_ = false;
 
+		// Outstanding requests are cancelled first,
+		// and then the port itself is closed
 		boost::system::error_code ec;
 		serialPort_.cancel(ec);
 		SetErrorCode(ec);
@@ -137,19 +155,10 @@ void SerialPort::Close() {
 	}
 }
 
-void SerialPort::Write(const unsigned char *buffer, size_t bufferLength) {
-	{
-		boost::mutex::scoped_lock lock(writeQueueMutex_);
-		writeQueue_.insert(writeQueue_.end(), buffer, buffer+bufferLength);
-	}
-
-	serialPort_.get_io_context().post(boost::bind(&SerialPort::WriteBegin, shared_from_this()));
-}
-
 void SerialPort::Write(const std::vector<unsigned char> &buffer) {
 	Write(&buffer[0], buffer.size());
 }
 
 void SerialPort::Write(const std::string &buffer) {
-	Write(reinterpret_cast<const unsigned char *>(buffer.c_str()), buffer.size()); // !!! Заменить _cast
+	Write(reinterpret_cast<const unsigned char *>(buffer.c_str()), buffer.size());
 }
